@@ -1,0 +1,58 @@
+.main-header {
+    width: 100%;
+    background: url(../images/header-bg.png) repeat-x;
+    min-height: 151px;
+    border-bottom: 3px solid #f9c31e;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.menu {
+    float: left;
+}
+
+nav ul {
+    position: relative;
+}
+ul {
+    list-style-type: disc;
+    margin: 0 0 1em 0;
+}
+ul, ol, dl {
+    font-size: 100%;
+    line-height: 1;
+}
+
+.logo {
+    padding-top: 19px;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px)
+.nav-menu>ul>li>a {
+    padding: 12px 10px;
+}
+nav li a:hover, nav li a:focus {
+    color: #f9c31e;
+}
+a:hover, a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px)
+.nav-menu {
+    margin-left: 0;
+    margin-top: 15px;
+    float: none;
+    width: 100%;
+}
+.nav-menu {
+    float: left;
+    width: 89%;
+}
+.clearfix {
+    display: block;
+}
