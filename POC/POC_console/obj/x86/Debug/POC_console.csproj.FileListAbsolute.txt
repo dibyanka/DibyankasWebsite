@@ -1,0 +1,5 @@
+C:\Users\adi\Documents\DibyankasWebsite\POC\POC_console\bin\Debug\POC_console.exe
+C:\Users\adi\Documents\DibyankasWebsite\POC\POC_console\bin\Debug\POC_console.pdb
+C:\Users\adi\Documents\DibyankasWebsite\POC\POC_console\obj\x86\Debug\POC_console.exe
+C:\Users\adi\Documents\DibyankasWebsite\POC\POC_console\obj\x86\Debug\POC_console.pdb
+C:\Users\adi\Documents\DibyankasWebsite\POC\POC_console\obj\x86\Debug\POC_console.csprojResolveAssemblyReference.cache
