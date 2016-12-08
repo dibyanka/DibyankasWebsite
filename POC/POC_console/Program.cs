@@ -17,6 +17,11 @@ namespace POC_console
             Console.WriteLine("Input string for reverse string is: ");
             string inputStr2 = Console.ReadLine();
             Console.WriteLine(reverseString(inputStr2));
+            Console.Write("Enter the set of numbers separated with comma:");
+            string numbers=Console.ReadLine();
+            List<int> inputSeries = new List<int>();
+            inputSeries = numbers.Split(',').Select(int.Parse).ToList();
+            printAllOdds(inputSeries);
             Console.ReadLine();
 		}
 
@@ -48,9 +53,18 @@ namespace POC_console
             return new String(istrarr);
         }
 
-        public static string getallodds()
-        { 
-        
+        public static void printAllOdds(List<int> inputNumbers)
+        {
+           var oddNumbers=(from odd in inputNumbers
+                              where odd % 2 != 0
+                              select odd).ToList();  
+      
+            foreach (var num in oddNumbers)
+            {
+                Console.WriteLine(num);
+            }
         }
+
+
 	}
 }
