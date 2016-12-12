@@ -9,6 +9,12 @@ namespace POC_console
 	{
 		static void Main(string[] args)
         {
+            Console.WriteLine("Enter the number from which repeated characters are to be removed: ");
+            string inputStrDup = Console.ReadLine();
+            RemoveDuplicateCharacters(inputStrDup);
+            Console.WriteLine("Enter the number whose factorial needs to be calculated:");
+            int factOf = int.Parse(Console.ReadLine());
+            Console.WriteLine("CalculateFactorial is: {0}" ,CalculateFactorial(factOf));
             Console.WriteLine("Input string for pallindromeCheck is: ");
             string inputStr1 = Console.ReadLine();
             Console.WriteLine(checkPalindrome(inputStr1));            
@@ -175,20 +181,60 @@ namespace POC_console
 
         public static int printNthFibbonacciSeries( int n)
         {
-            int nth;
-            List<int> fib=new List<int>();
-            fib.Add(0); fib.Add(1); fib.Add(2);
-            //fib[0] = 0; fib[1]= 1; fib[2]= 1;
-            
-            for (int i = 2; i <= n ; i++)
+            int nth=0;
+            int [] fib = new int[n];
+          
+            fib[0] = 0; fib[1]= 1; 
+
+            if (n == 0) { nth= fib[0] ;}
+            else if (n == 1) { nth= fib[1]; }
+            else{
+
+            for (int i = 2; i < n; i++)
             {
-                fib[i]= fib[i-2]+fib[i-1];                
+                fib[i] = fib[i - 2] + fib[i - 1];
+                nth = fib[i];
             }
 
-            nth = fib[n];
-
+            }
             return nth;
 
         }
+        /// <summary>
+        /// Program to calculate factorial
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public static int CalculateFactorial(int n)
+        {
+            int result=1;
+            for (int i = 1; i <= n; i++)
+            {
+                result *= i;
+            }
+                return result;
+        }
+
+        /// <summary>
+        /// Program to find all pairs of elements in an integer array, whose sum is equal to a given number
+        /// </summary>
+        /// <returns></returns>
+        //public static int[] FindPairOfNumbers()
+        // { 
+        
+        //}
+
+
+        /// <summary>
+        /// Program to print the string after removing duplicate chars in it
+        /// </summary>
+        /// <param name="inputStr"></param>
+        public static void RemoveDuplicateCharacters(string inputStr)
+        {
+            string result = new string(inputStr.ToLower().Distinct().ToArray());
+            Console.WriteLine("Resulting string is: {0}", result);
+        }
+
+
 	}
 }
