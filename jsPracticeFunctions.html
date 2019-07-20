@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+        <h3>Simple javascript functions for beginners: </h3>        
+        <button onclick="is_integer(x)">Check if input is integer</button>
+        <p>Is integer:<span id="isInteger"></span> </p>
+        <button onclick="numbers.forEach(add_all)">GetSumOfArrayElements</button>
+        <p>Sum of array elements:<span id="demo"></span></p>
+        <button onclick="celciusToFahrenheit(tempC)">CelciusToFahrenheit</button>
+        <p>The temperature in Fahrenheit:<span id = "demo1"></span> </p>
+        <button onclick="fahrenheitToCelcius(tempF)">FahrenheitToCelius</button>
+        <p>The temperature in Celcius:<span id = "demo2"></span> </p>
+        <button onclick="factorial(n)">Calculate factorial</button>
+        <p>The factorial of given number is:<span id = "demo3"></span> </p>
+    
+   <script>
+       //Write a javascript function named is_integer which checks if the passed argument is an integer. You can use any mathematical operator or functions defined in the Math object.
+        var x = 123.345;
+        var result;
+       function is_integer(x)
+        {
+        result = (typeof x =="number" && isFinite(x) && Math.floor(x)==x);        
+        isInteger.innerHTML = result;
+        }
+      // Using the forEach function defined for an array, find the sum of the array of numbers. [function add_all(arr) {...}]
+        var sum = 0;
+        var numbers = [3, 4, 6, 8, 1];
+        function add_all(arrElement)
+        {
+            sum += arrElement;
+            demo.innerHTML = sum;
+        }
+
+        //Write a JavaScript program to convert temperatures to and from celsius, fahrenheit. [ Use the formula : c/5 = (f-32)/9, where c = temperature in celsius and f = temperature in fahrenheit]
+        var tempC = 15
+        var convertedToF;
+        var tempF = 59
+        function celciusToFahrenheit(tempC)
+        {
+            convertedToF = (tempC*(9/5))+32;
+            demo1.innerHTML = convertedToF;
+        }
+        
+        var convertedToC;
+        function fahrenheitToCelcius(tempF)
+        {
+            convertedToC = ((tempF-32)*(5/9));
+            //console.log(convertedToC);
+            demo2.innerHTML = convertedToC;
+        }
+
+        //Write a factorial function that returns the factorial of a given number, n. Make sure you return the calculated value and not just print it. [function factorial(n){...}]
+        var n = 5;
+        var fact = 1;
+        function factorial(n)
+        {
+            for( var i=n; i>0 ; i--)
+            {
+                fact = fact*i ;
+            }
+            demo3.innerHTML = fact;
+            return factorial;
+        }
+
+        //Write a javascript function that converts a given amount of money into coins of denominations (1, 2, 5, 10 and 25). [function convert_to_coins(amount) {...}]. 
+        //You may choose to print the coin denominations used on the console. E.g. convert_to_coins(87) should print 25 25 25 10 2.
+        var amount = 10;
+
+        function convert_to_coins(amount)
+        {
+
+        }
+        </script>
+
+
+</body>
+</html>
